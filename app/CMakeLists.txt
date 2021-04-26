@@ -26,9 +26,13 @@ target_sources(${PROJECT_NAME}
 #         )
 
 # add components
-add_subdirectory(components/example)
+set(COMPONENT_LIST example)
+
+foreach(COMPONENT IN LISTS COMPONENT_LIST)
+        add_subdirectory(components/${COMPONENT})
+endforeach()
 
 target_link_libraries(${PROJECT_NAME}
         PRIVATE
-                example
+                ${COMPONENT_LIST}
         )

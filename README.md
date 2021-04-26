@@ -2,9 +2,11 @@
 
 This is an example C++ project using CMake. This project can be used as a template for new projects.
 
+The project uses the GoogleTest library for unit tests.
+
 # Usage
 
-## Build and run in terminal
+## Build and run the application
 
 Run the following command on the command line to build the sample project:
 
@@ -16,6 +18,13 @@ To build and run the sample project, run the following command:
 
 ```
 ./scripts/build_and_run.sh
+```
+
+## Build and run the unit tests
+
+To build and run the unit tests, run the following command:
+```
+./scripts/test.sh
 ```
 
 ## IDEs

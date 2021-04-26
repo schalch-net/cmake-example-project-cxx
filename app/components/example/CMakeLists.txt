@@ -20,15 +20,16 @@ target_include_directories(${COMPONENT_NAME}
 # unit test executable for this component
 add_executable(${COMPONENT_NAME}_test)
 
+file(GLOB TEST_SOURCES "test/*.c*")
 target_sources(${COMPONENT_NAME}_test
-        PRIVATE
-                test/ExampleApp_test.cpp
+        PRIVATE 
+                ${TEST_SOURCES}
         )
 
 target_link_libraries(${COMPONENT_NAME}_test PRIVATE gtest_main)
 
 target_include_directories(${COMPONENT_NAME}_test
-        PUBLIC
+        PRIVATE
                 test
         )
 
